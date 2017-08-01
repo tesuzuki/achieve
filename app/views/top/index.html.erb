@@ -1,5 +1,5 @@
-<p><%= notice %></p>
 <section class="main-header">
+  <p class="flash"><%= notice %><%= alert %></p>
   <img src="<%= asset_path "achieve.png" %>">
 </section>
 <div id="page-top-btn" class="page-top-btn">
@@ -20,7 +20,9 @@
     <div class="row">
     <h2>Function</h2>
       <div class="function-images">
+        
         <div class="col-md-3 col-sm-6">
+        
           <div class="function-image">
             <img src="<%= asset_path "key.png" %>">
             <p>ログイン機能</p>
