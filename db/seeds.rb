@@ -14,15 +14,12 @@
                password_confirmation: password,
                name: Faker::Name.name,
                )
-end
-
-100.times do |n|
-    text=+Faker::Pokemon.name
-    title="I love "+text
-    content=text+" is No.1 Pokemon!!"
-    id=Faker::Number.number(2)
-    Blog.create!(title: title,
-                 content: content,
-                 user_id: id,
-        )
+               
+  text=+Faker::Pokemon.name
+  title="I love "+text
+  content=text+" is No.1 Pokemon!!"
+  Blog.create!(title: title,
+               content: content,
+               user_id: n,
+              )
 end
