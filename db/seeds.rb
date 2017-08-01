@@ -15,11 +15,11 @@
                name: Faker::Name.name,
                )
                
-  text=+Faker::Pokemon.name
+  text=Faker::Pokemon.name
   title="I love "+text
   content=text+" is No.1 Pokemon!!"
   Blog.create!(title: title,
                content: content,
-               user_id: n,
+               user_id: n+1,
               )
 end
