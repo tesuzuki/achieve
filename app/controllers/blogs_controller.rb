@@ -4,7 +4,6 @@ class BlogsController < ApplicationController
   def index
     @blogs=Blog.all
     @users=User.all
-    raise
   end
   
   def new 

@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   
   root 'top#index'
   
+  
+  resources :poems, only: [:index,:show] 
 end
