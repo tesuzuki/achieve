@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
+      <h2><%= @user.name %></h2>
+      <%= profile_img(@user) %>
+      <%= render 'follow_form', user: @user %>
+    </div>
+
+    <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
+        <h2>フォロー一覧</h2>
+        <% @follows.each do |follow| %>
+         <blockquote>
+            <%= link_to follow.name, user_path(follow.id) %>
+            <%= profile_img(follow) %>
+            <%= render 'follow_form', user: follow %>
+         </blockquote>
+        <% end %>
+    </div>
+    <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
+        <h2>フォロワー一覧</h2>
+        <% @followed_users.each do |followed| %>
+         <blockquote>
+            <%= link_to followed.name, user_path(followed.id) %>
+            <%= profile_img(followed) %>
+            <%= render 'follow_form', user: followed %>
+         </blockquote>
+        <% end %>
+    </div>
+</div>
